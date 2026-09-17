@@ -1,0 +1,112 @@
+package pe.edu.upc.demosi_beta.entities;
+
+import jakarta.persistence.*;
+
+public class CulturalEvent {
+    @Entity
+    @Table(name = "Cultural_Events")
+    public class culturalEvent {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long idCulturalEvent;
+
+        @Column(name = "nameCEvent",length = 100,nullable = false)
+        private String nameCulturalEvent;
+
+        @Column(name = "descriptionCEvent",length = 500,nullable = false)
+        private String descriptionCulturalEvent;
+
+        @Column(name = "locationCEvent",length = 50,nullable = false)
+        private String locationCulturalEvent;
+
+        @Column(name = "modalityCEvent",length = 100,nullable = false)
+        private String modalityCulturalEvent;
+
+        @Column(name = "capacity",nullable = false)
+        private boolean capacityCulturalEvent;
+
+        @Column(name = "status",nullable = false)
+        private boolean statusCulturalEvent;
+
+        @Column(name = "buget",nullable = false)
+        private boolean activateCEvent;
+
+        public culturalEvent() {
+        }
+
+        public culturalEvent(Long idCulturalEvent, String nameCulturalEvent, String descriptionCulturalEvent, String locationCulturalEvent, String modalityCulturalEvent, boolean capacityCulturalEvent, boolean statusCulturalEvent, boolean activateCEvent) {
+            this.idCulturalEvent = idCulturalEvent;
+            this.nameCulturalEvent = nameCulturalEvent;
+            this.descriptionCulturalEvent = descriptionCulturalEvent;
+            this.locationCulturalEvent = locationCulturalEvent;
+            this.modalityCulturalEvent = modalityCulturalEvent;
+            this.capacityCulturalEvent = capacityCulturalEvent;
+            this.statusCulturalEvent = statusCulturalEvent;
+            this.activateCEvent = activateCEvent;
+        }
+
+        public Long getIdCulturalEvent() {
+            return idCulturalEvent;
+        }
+
+        public void setIdCulturalEvent(Long idCulturalEvent) {
+            this.idCulturalEvent = idCulturalEvent;
+        }
+
+        public String getNameCulturalEvent() {
+            return nameCulturalEvent;
+        }
+
+        public void setNameCulturalEvent(String nameCulturalEvent) {
+            this.nameCulturalEvent = nameCulturalEvent;
+        }
+
+        public String getDescriptionCulturalEvent() {
+            return descriptionCulturalEvent;
+        }
+
+        public void setDescriptionCulturalEvent(String descriptionCulturalEvent) {
+            this.descriptionCulturalEvent = descriptionCulturalEvent;
+        }
+
+        public String getLocationCulturalEvent() {
+            return locationCulturalEvent;
+        }
+
+        public void setLocationCulturalEvent(String locationCulturalEvent) {
+            this.locationCulturalEvent = locationCulturalEvent;
+        }
+
+        public String getModalityCulturalEvent() {
+            return modalityCulturalEvent;
+        }
+
+        public void setModalityCulturalEvent(String modalityCulturalEvent) {
+            this.modalityCulturalEvent = modalityCulturalEvent;
+        }
+
+        public boolean isCapacityCulturalEvent() {
+            return capacityCulturalEvent;
+        }
+
+        public void setCapacityCulturalEvent(boolean capacityCulturalEvent) {
+            this.capacityCulturalEvent = capacityCulturalEvent;
+        }
+
+        public boolean isStatusCulturalEvent() {
+            return statusCulturalEvent;
+        }
+
+        public void setStatusCulturalEvent(boolean statusCulturalEvent) {
+            this.statusCulturalEvent = statusCulturalEvent;
+        }
+
+        public boolean isActivateCEvent() {
+            return activateCEvent;
+        }
+
+        public void setActivateCEvent(boolean activateCEvent) {
+            this.activateCEvent = activateCEvent;
+        }
+    }
+}
