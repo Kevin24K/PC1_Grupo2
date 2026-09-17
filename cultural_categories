@@ -1,0 +1,82 @@
+package pe.edu.upc.demosi_beta.entities;
+
+import jakarta.persistence.*;
+
+
+@Entity
+@Table(name = "cultural_categories")
+public class CulturalCategory {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idCulturalCategory;
+
+    @Column(name = "nameCCategory",length = 100,nullable = false)
+    private String nameCulturalCategory;
+
+    @Column(name = "descriptionCCategory",length = 500,nullable = false)
+    private String descriptionCulturalCategory;
+
+    @Column(name = "typeCCategory",length = 50,nullable = false)
+    private String typeCulturalCategory;
+
+    @Column(name = "targetAudienceCCategory",length = 100,nullable = false)
+    private String targetAudienceCCategory;
+
+    @Column(name = "activateCCategory",nullable = false)
+    private boolean activateCCategory;
+
+    public CulturalCategory(Long idCulturalCategory, String nameCulturalCategory, String descriptionCulturalCategory, String typeCulturalCategory, String targetAudienceCCategory, boolean activateCCategory) {
+        this.idCulturalCategory = idCulturalCategory;
+        this.nameCulturalCategory = nameCulturalCategory;
+        this.descriptionCulturalCategory = descriptionCulturalCategory;
+        this.typeCulturalCategory = typeCulturalCategory;
+        this.targetAudienceCCategory = targetAudienceCCategory;
+        this.activateCCategory = activateCCategory;
+    }
+    public CulturalCategory() {
+    }
+
+    public Long getIdCulturalCategory() {
+        return idCulturalCategory;
+    }
+
+    public void setIdCulturalCategory(Long idCulturalCategory) {
+        this.idCulturalCategory = idCulturalCategory;
+    }
+
+    public String getNameCulturalCategory() {
+        return nameCulturalCategory;
+    }
+
+    public void setNameCulturalCategory(String nameCulturalCategory) {
+        this.nameCulturalCategory = nameCulturalCategory;
+    }
+
+    public String getDescriptionCulturalCategory() {
+        return descriptionCulturalCategory;
+    }
+
+    public void setDescriptionCulturalCategory(String descriptionCulturalCategory) {
+        this.descriptionCulturalCategory = descriptionCulturalCategory;
+    }
+
+    public String getTypeCulturalCategory() {
+        return typeCulturalCategory;
+    }
+
+    public void setTypeCulturalCategory(String typeCulturalCategory) {
+        this.typeCulturalCategory = typeCulturalCategory;
+    }
+
+    public String getTargetAudienceCCategory() {
+        return targetAudienceCCategory;
+    }
+
+    public void setTargetAudienceCCategory(String targetAudienceCCategory) {
+        this.targetAudienceCCategory = targetAudienceCCategory;
+    }
+
+    public boolean isActivateCCategory() {
+        return activateCCategory;
+    }
+}
