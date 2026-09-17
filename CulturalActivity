@@ -1,0 +1,122 @@
+package pe.edu.upc.demosi_beta.entities;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "cultural_Activity")
+public class CulturalActivity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long  idCulturalActivity;
+
+    @Column(name = "nameCActivity",length = 100,nullable = false)
+    private String nameCulturalActivity;
+
+    @Column(name = "descriptionCActivity",length = 500,nullable = false)
+    private String descriptionCulturalActivity;
+
+    @Column(name = "quantityCActivity",length = 50,nullable = false)
+    private long quantityCulturalActivity;
+
+    @Column(name = "activityDateCActivity",length = 100,nullable = false)
+    private String activityDateCulturalActivity;
+
+    @Column(name = "starttimeCActivity",nullable = false)
+    private boolean starttimeCulturalActivity;
+
+    @Column(name = "durationCActivity",nullable = false)
+    private boolean durationCulturalActivity;
+
+    @Column(name = "costCActivity",nullable = false)
+    private boolean costCulturalActivity;
+
+    @Column(name = "responsableCA",nullable = false)
+    private boolean responsableCulturalActivity;
+
+    public CulturalActivity() {
+    }
+
+    public CulturalActivity(Long idCulturalActivity, String nameCulturalActivity, String descriptionCulturalActivity, long quantityCulturalActivity, String activityDateCulturalActivity, boolean starttimeCulturalActivity, boolean durationCulturalActivity, boolean costCulturalActivity, boolean responsableCulturalActivity) {
+        this.idCulturalActivity = idCulturalActivity;
+        this.nameCulturalActivity = nameCulturalActivity;
+        this.descriptionCulturalActivity = descriptionCulturalActivity;
+        this.quantityCulturalActivity = quantityCulturalActivity;
+        this.activityDateCulturalActivity = activityDateCulturalActivity;
+        this.starttimeCulturalActivity = starttimeCulturalActivity;
+        this.durationCulturalActivity = durationCulturalActivity;
+        this.costCulturalActivity = costCulturalActivity;
+        this.responsableCulturalActivity = responsableCulturalActivity;
+    }
+
+    public Long getIdCulturalActivity() {
+        return idCulturalActivity;
+    }
+
+    public void setIdCulturalActivity(Long idCulturalActivity) {
+        this.idCulturalActivity = idCulturalActivity;
+    }
+
+    public String getNameCulturalActivity() {
+        return nameCulturalActivity;
+    }
+
+    public void setNameCulturalActivity(String nameCulturalActivity) {
+        this.nameCulturalActivity = nameCulturalActivity;
+    }
+
+    public String getDescriptionCulturalActivity() {
+        return descriptionCulturalActivity;
+    }
+
+    public void setDescriptionCulturalActivity(String descriptionCulturalActivity) {
+        this.descriptionCulturalActivity = descriptionCulturalActivity;
+    }
+
+    public long getQuantityCulturalActivity() {
+        return quantityCulturalActivity;
+    }
+
+    public void setQuantityCulturalActivity(long quantityCulturalActivity) {
+        this.quantityCulturalActivity = quantityCulturalActivity;
+    }
+
+    public String getActivityDateCulturalActivity() {
+        return activityDateCulturalActivity;
+    }
+
+    public void setActivityDateCulturalActivity(String activityDateCulturalActivity) {
+        this.activityDateCulturalActivity = activityDateCulturalActivity;
+    }
+
+    public boolean isStarttimeCulturalActivity() {
+        return starttimeCulturalActivity;
+    }
+
+    public void setStarttimeCulturalActivity(boolean starttimeCulturalActivity) {
+        this.starttimeCulturalActivity = starttimeCulturalActivity;
+    }
+
+    public boolean isDurationCulturalActivity() {
+        return durationCulturalActivity;
+    }
+
+    public void setDurationCulturalActivity(boolean durationCulturalActivity) {
+        this.durationCulturalActivity = durationCulturalActivity;
+    }
+
+    public boolean isCostCulturalActivity() {
+        return costCulturalActivity;
+    }
+
+    public void setCostCulturalActivity(boolean costCulturalActivity) {
+        this.costCulturalActivity = costCulturalActivity;
+    }
+
+    public boolean isResponsableCulturalActivity() {
+        return responsableCulturalActivity;
+    }
+
+    public void setResponsableCulturalActivity(boolean responsableCulturalActivity) {
+        this.responsableCulturalActivity = responsableCulturalActivity;
+    }
+}
